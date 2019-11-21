@@ -9,11 +9,3 @@
 #      create_home: "yes"
     append: no
   with_items: "{{ users }}"
-
-
-- name: "Remove old user accounts"
-  user:
-    name: "{{ item }}"
-    state: "absent"
-    remove: "yes"
-  with_items: "{{ remove_users }}"

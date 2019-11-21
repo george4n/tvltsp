@@ -1,16 +1,18 @@
 ---
 - hosts: servers
   become: true
+  
   roles:
-  - users
-  vars:
-    users:
-    - username: "test1"
-      comment: "John Doe"
-      group: "televinken"
-      password: "hello2"
-      shell: /bin/bash
-    vars:
-    remove_users:
-    - ruby
+  - add-users
+  - remove-users
+#  vars:
+#    users:
+#    - username: "test1"
+#      comment: "John Doe"
+#      group: "televinken"
+#      password: "hello2"
+#      shell: /bin/bash
+#    vars:
+#    remove_users:
+#    - ruby
 #    - test1
