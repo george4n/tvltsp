@@ -1,0 +1,159 @@
+- name: add ppa for ltsp
+  apt_repository:
+    repo: 'ppa:ltsp'
+    state: present
+
+- name: add ppa for ansible
+  apt_repository:
+    repo: 'ppa:ansible/ansible'
+    state: present
+
+- name: Delete File Google Chrome Rogue List
+  file:
+    path: /etc/apt/sources.list.d/google-chrome.list
+    state: absent
+
+- name: Adding sources for Chrome
+  apt_repository:
+    repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+    state: present
+
+- name: "Ensure Google linux signing key present"
+  apt_key: url=https://dl-ssl.google.com/linux/linux_signing_key.pub state=present
+
+- name: Update APT Repositories Cache
+  apt:
+    update_cache: yes
+    #allow_unauthenticated: yes
+
+- name: Install Required Packages
+  apt: pkg={{ item  }} state=present
+  with_items:
+  - ltsp 
+  - dnsmasq 
+  - nfs-kernel-server 
+  - openssh-server 
+  - squashfs-tools 
+  - ethtool 
+  - net-tools 
+  - epoptes
+  - zoiper5
+  - gnome-system-monitor
+  - gnome-calculator
+  - vim
+  - iptraf-ng
+  - xpad
+  - zenity
+  - pwgen
+  - finger
+  - language-pack-sv
+  - language-pack-sv-base
+  - language-pack-gnome-sv
+  - language-pack-gnome-sv-base
+  - curl
+  - lightdm
+  - git
+  - lm-sensors
+  - google-chrome-stable
+  - ansible
+
+
+- name: Remove Blacklisted Packages
+  apt: pkg={{ item  }} state=absent
+  with_items:
+  - transmission-gtk
+  - transmission-common
+  - gnome-mahjongg
+  - gnome-mines
+  - gnome-sudoku
+  - account-plugin-aim
+  - account-plugin-facebook
+  - account-plugin-flickr
+  - account-plugin-jabber
+  - account-plugin-salut
+  - account-plugin-yahoo
+  - virtualbox
+  - virtualbox-qt
+  - chromium-browser
+  - firefox
+
+
+- name: add administrator user to epoptes group
+  user:
+    name: administrator
+    groups: epoptes
+    append: yes  
+
+- name: Configure /etc/modprobe.d/blacklist.conf
+  lineinfile:
+    path: /etc/modprobe.d/blacklist.conf
+    line: 'blacklist snd_hda_intel'
+
+- name: Download Zoiper Debian Package
+  copy: src=../files/zoiper5.deb dest=/tmp/zoiper5.deb owner=root group=root mode=0755
+
+- name: Install zoiper5.deb
+  apt: deb="/tmp/zoiper5.deb"
+
+- name: Install Dependencies
+  shell: apt install -fy
+
+- name: Configure LightDM
+  copy: src=../files/lightdm.conf dest=/etc/lightdm/lightdm.conf owner=root group=root mode=0644
+
+- name: Configure LTSP
+  copy: src=../files/ltsp.conf dest=/etc/ltsp/ltsp.conf owner=root group=root mode=0644
+
+- name: Configure Environment
+  copy: src=../files/environment dest=/etc/environment owner=root group=root mode=0644
+
+- name: Configure televinken policies
+  copy: src=../files/policy-televinken.json dest=/etc/ltsp/policy-televinken.json owner=root group=root mode=0644
+
+- name: Configure 3kundservice policies
+  copy: src=../files/policy-3kundservice.json dest=/etc/ltsp/policy-3kundservice.json owner=root group=root mode=0644
+
+- name: Configure 3telesales policies
+  copy: src=../files/policy-3telesales.json dest=/etc/ltsp/policy-3telesales.json owner=root group=root mode=0644
+
+- name: Configure 3solsidan policies
+  copy: src=../files/policy-3solsidan.json dest=/etc/ltsp/policy-3solsidan.json owner=root group=root mode=0644
+
+- name: Create policies path
+  file: 
+    path: /etc/opt/chrome/policies
+    owner: root 
+    group: root 
+    mode: 0755 
+    state: directory
+
+- name: Ensure group "televinken" exists
+  group:
+    name: televinken
+    gid: 501
+    state: present
+
+- name: Ensure group "3kundservice" exists
+  group:
+    name: 3kundservice
+    gid: 502
+    state: present
+
+- name: Ensure group "3telesales" exists
+  group:
+    name: 3telesales
+    gid: 503
+    state: present
+
+- name: Ensure group "3solsidan" exists
+  group:
+    name: 3solsidan
+    gid: 504
+    state: present
+
+
+- git:
+    repo: 'https://github.com/george4n/styx.git'
+    dest: /usr/local/bin/styx/
+    clone: yes
+    update: yes
