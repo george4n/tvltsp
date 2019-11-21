@@ -1,12 +1,14 @@
 users:
 - username: "test1"
   comment: "John Doe"
+  uid: "1011"
   group: "televinken"
   password: "hello2"
   shell: /bin/bash
 
 - username: "jsmith"
   comment: "John Smith"
+  uid: "1005"
   group: "televinken"
   password: "123456"
   shell: /bin/bash
@@ -14,6 +16,7 @@ users:
 
 - username: "gsmith"
   comment: "George Smith"
+  uid: "1007"
   group: "televinken"
   password: "123456"
   shell: /bin/bash
@@ -21,7 +24,16 @@ users:
 
 - username: "tuser"
   comment: "Test User"
+  uid: "1009"
   group: "televinken"
+  password: "123456"
+  shell: /bin/bash
+
+
+- username: "jmanchild"
+  comment: "Jake Manchild"
+  uid: "1012"
+  group: "3kundservice"
   password: "123456"
   shell: /bin/bash
 

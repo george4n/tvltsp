@@ -85,6 +85,7 @@ groupcalc
 cat <<EOF
 - username: "$USERNAME"
   comment: "$FIRSTNAME $LASTNAME"
+  uid: "$CUSTOMUID"
   group: "$CUSTOMGROUP"
   password: "$PASSWORD"
   shell: /bin/bash
@@ -105,6 +106,7 @@ tee -a roles/add-users/vars/main.yml <<EOF
 
 - username: "$USERNAME"
   comment: "$FIRSTNAME $LASTNAME"
+  uid: "$CUSTOMUID"
   group: "$CUSTOMGROUP"
   password: "$PASSWORD"
   shell: /bin/bash

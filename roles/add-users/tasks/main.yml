@@ -2,6 +2,7 @@
   user:
     name: "{{ item.username }}"
     comment: "{{ item.comment }}"
+    uid: "{{ item.uid }}"
     group: "{{ item.group }}"
     password: "{{ item.password | password_hash('sha512') }}"
     update_password: "always"
