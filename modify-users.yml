@@ -4,3 +4,7 @@
   roles:
   - add-users
   - remove-users
+
+  tasks:
+  - name: init ltsp for new users
+    shell: ltsp initrd
