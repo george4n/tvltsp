@@ -2,4 +2,4 @@
 - hosts: servers
   become: true
   roles:
-  - ltsp-install
+  - ltsp-update

@@ -1,0 +1,17 @@
+- name: update packages
+  apt:
+    upgrade: dist
+    update_cache: yes
+    state: build-dep
+    allow_unauthenticated: no
+    autoremove: yes
+
+- name: install dependencies
+  shell: apt install -fy
+
+- name: ltsp initrd
+  shell: ltsp initrd
+  ignore_errors: true
+
+- name: regenerate boot image
+  shell: ltsp image /
