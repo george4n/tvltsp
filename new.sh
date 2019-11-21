@@ -13,3 +13,38 @@
   group: "3"
   password: "3"
   shell: /bin/bash
+- username: ""
+  comment: "George Neo"
+  group: "televinken"
+  password: "deidijed"
+  shell: /bin/bash
+- username: ""
+  comment: "George Neophytou"
+  group: "501"
+  password: "939834"
+  shell: /bin/bash
+- username: "gneophytou"
+  comment: "George Neophytou"
+  group: "501"
+  password: "303494"
+  shell: /bin/bash
+- username: "gneophytou"
+  comment: "George Neophytou"
+  group: "501"
+  password: "39394"
+  shell: /bin/bash
+- username: "gneophytou"
+  comment: "George Neophytou"
+  group: "televinken"
+  password: "234234"
+  shell: /bin/bash
+- username: "gneophytou"
+  comment: "george Neophytou"
+  group: "televinken"
+  password: "342342"
+  shell: /bin/bash
+- username: "gneophytou"
+  comment: "George Neophytou"
+  group: "televinken"
+  password: "234324"
+  shell: /bin/bash

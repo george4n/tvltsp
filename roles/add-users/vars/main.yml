@@ -4,3 +4,24 @@ users:
   group: "televinken"
   password: "hello2"
   shell: /bin/bash
+
+- username: "jsmith"
+  comment: "John Smith"
+  group: "televinken"
+  password: "123456"
+  shell: /bin/bash
+
+
+- username: "gsmith"
+  comment: "George Smith"
+  group: "televinken"
+  password: "123456"
+  shell: /bin/bash
+
+
+- username: "tuser"
+  comment: "Test User"
+  group: "televinken"
+  password: "123456"
+  shell: /bin/bash
+
