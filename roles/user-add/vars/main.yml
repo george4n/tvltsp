@@ -55,13 +55,6 @@ users:
   password: "123456"
   shell: /bin/bash
   
-- username: "tseven"
-  comment: "Test Seven"
-  uid: "1020"
-  group: "televinken"
-  password: "111111"
-  shell: /bin/bash
-
 - username: "teight"
   comment: "Test Eight"
   uid: "1021"
