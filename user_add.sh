@@ -110,7 +110,6 @@ tee -a roles/users-add/vars/main.yml <<EOF
   group: "$CUSTOMGROUP"
   password: "$PASSWORD"
   shell: /bin/bash
-
 EOF
 
 clear
