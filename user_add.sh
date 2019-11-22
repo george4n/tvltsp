@@ -102,7 +102,7 @@ then
 fi
 
 
-tee -a roles/add-users/vars/main.yml <<EOF
+tee -a roles/users-add/vars/main.yml <<EOF
 
 - username: "$USERNAME"
   comment: "$FIRSTNAME $LASTNAME"
