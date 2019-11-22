@@ -32,11 +32,3 @@ users:
   shell: /bin/bash
   home: /tvltsp/users/3solsidan/ssolsidan
 
-- username: "tone"
-  comment: "Test One"
-  uid: "1201"
-  group: "televinken"
-  password: "111111"
-  shell: /bin/bash
-  home: /tvltsp/users/televinken/tone
-
