@@ -9,11 +9,12 @@ read USERNAME
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     echo "Using sed for Linux"
         sed -e '/"'$USERNAME'"/{N;N;N;N;N;d}' roles/users-add/vars/main.yml
-elif [[ "$OSTYPE" == "darwin"* ]]; then
+elif [[ "$OSTYPE" == "darwinn"* ]]; then
         echo "Using sed for Mac OSX"
         sed -e '/"'$USERNAME'"/{N;N;N;N;N;d;}' roles/users-add/vars/main.yml
 else
         echo "Unknown OS"
+        break
 fi
 
 echo "deleting user..."
