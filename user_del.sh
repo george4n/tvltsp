@@ -2,7 +2,7 @@
 
 USERADDFILE='roles/user-add/vars/main.yml'
 USERDELFILE='roles/user-del/vars/main.yml'
-DELETEOSX=`sed -i '' '/"'$USERNAME'"/{N;N;N;N;N;d;}' $USERADDFILE`
+DELETEOSX=`sed -i '' '/"'$USERNAME'"/{N;N;N;N;N;N;d;}' $USERADDFILE`
 DELETELINUX=`sed -i '/"'$USERNAME'"/{N;N;N;N;N;d}' $USERADDFILE`
 
 function delete-user-conf-osx {

@@ -54,6 +54,7 @@ users:
   group: "televinken"
   password: "123456"
   shell: /bin/bash
+  
 - username: "tseven"
   comment: "Test Seven"
   uid: "1020"
