@@ -1,1 +1,8 @@
 users:
+- username: "stelevinken"
+  comment: "Skel Televinken"
+  uid: "1001"
+  group: "televinken"
+  password: "skel"
+  shell: /bin/bash
+
