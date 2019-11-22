@@ -7,14 +7,14 @@ DELETELINUX=`sed -i '/"'$USERNAME'"/{N;N;N;N;N;d}' $USERADDFILE`
 
 function delete-user-conf-osx {
 
-    echo "\n- $USERNAME" | tee -a $USERDELFILE
+    echo -e "\n- $USERNAME" | tee -a $USERDELFILE
     $DELETEOSX
 
 }
 
 function delete-user-conf-linux {
 
-    echo "\n- $USERNAME" | tee -a $USERDELFILE
+    echo -e "\n- $USERNAME" | tee -a $USERDELFILE
     $DELETELINUX
 
 }
