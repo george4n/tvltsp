@@ -1,5 +1,5 @@
 #!/bin/bash
-
+git pull
 USERADDFILE='roles/user-add/vars/main.yml'
 USERDELFILE='roles/user-del/vars/main.yml'
 
