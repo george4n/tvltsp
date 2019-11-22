@@ -6,7 +6,7 @@
     group: "{{ item.group }}"
     password: "{{ item.password | password_hash('sha512') }}"
     update_password: "always"
-    shell: "{{ item.shell }}"
-#      create_home: "yes"
+    shell: "{{ item.shell }}"     
+    create_home: "no"
     append: no
   with_items: "{{ users }}"

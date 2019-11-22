@@ -27,3 +27,10 @@ users:
   password: "skel"
   shell: /bin/bash
 
+- username: "tone"
+  comment: "Test One"
+  uid: "1201"
+  group: "televinken"
+  password: "111111"
+  shell: /bin/bash
+
