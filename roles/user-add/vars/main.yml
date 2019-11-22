@@ -20,3 +20,10 @@ users:
   password: "skel"
   shell: /bin/bash
 
+- username: "ssolsidan"
+  comment: "Skel Solsidan"
+  uid: "1013"
+  group: "3solsidan"
+  password: "skel"
+  shell: /bin/bash
+
