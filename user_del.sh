@@ -6,14 +6,14 @@ USERDELFILE='roles/user-del/vars/main.yml'
 function delete-user-conf-osx {
 
     echo -e "\n- $USERNAME" | tee -a $USERDELFILE
-    sed -i '' '/"'$USERNAME'"/{N;N;N;N;N;N;d;}' $USERADDFILE
+    sed -i '' '/"'$USERNAME'"/{N;N;N;N;N;N;N;d;}' $USERADDFILE
 
 }
 
 function delete-user-conf-linux {
 
     echo -e "\n- $USERNAME" | tee -a $USERDELFILE
-    sed -i '/"'$USERNAME'"/{N;N;N;N;N;N;d;}' $USERADDFILE
+    sed -i '/"'$USERNAME'"/{N;N;N;N;N;N;N;d;}' $USERADDFILE
 
 }
 
@@ -39,7 +39,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 
         if grep -q $USERNAME $USERADDFILE; then
             echo "$USERNAME found!"
-            sed -n  '/"'$USERNAME'"/{N;N;N;N;N;p;}' $USERADDFILE
+            sed -n  '/"'$USERNAME'"/{N;N;N;N;N;N;p;}' $USERADDFILE
                 
                 # Ask permission to delete user
                 read -p "-------> Do you want to delete this user? The operation is NOT reversible(y/n) " -n 1 -r
@@ -73,7 +73,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
         if grep -q $USERNAME $USERADDFILE; then
             echo "$USERNAME found!"
-            sed -n  '/"'$USERNAME'"/{N;N;N;N;N;p;}' $USERADDFILE
+            sed -n  '/"'$USERNAME'"/{N;N;N;N;N;N;p;}' $USERADDFILE
                 
                 # Ask permission to delete user
                 read -p "-------> Do you want to delete this user? The operation is NOT reversible(y/n) " -n 1 -r

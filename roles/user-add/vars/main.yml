@@ -48,11 +48,3 @@ users:
   shell: /bin/bash
   home: /tvltsp/users/televinken/ttwo
 
-- username: "tthree"
-  comment: "Test Three"
-  uid: "1203"
-  group: "televinken"
-  password: "111111"
-  shell: /bin/bash
-  home: /tvltsp/users/televinken/tthree
-
