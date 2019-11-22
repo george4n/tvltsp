@@ -48,16 +48,19 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
                 # Ask permission to delete user
                 read -p "-------> Do you want to delete this user? The operation is NOT reversible(y/n) " -n 1 -r
                     
-                    clear
-                    delete-user-conf-osx
-                    playbook
-                    exit 0
+                    
 
                 if [[ ! $REPLY =~ ^[Yy]$ ]]
                 then
+                    clear
                     echo "Exiting: Rerun the script"
                     exit 1
                 fi
+
+                clear
+                    delete-user-conf-osx
+                    playbook
+                    exit 0
         else
             echo "$USERNAME not found!"
             echo "aborting..."
