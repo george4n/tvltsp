@@ -2,8 +2,8 @@
 - hosts: servers
   become: true
   roles:
-  - add-users
-  - remove-users
+  - users-add
+  - users-remove
 
   tasks:
   - name: init ltsp for new users
