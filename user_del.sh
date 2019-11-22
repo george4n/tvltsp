@@ -2,7 +2,7 @@
 
 USERADDFILE='roles/user-add/vars/main.yml'
 USERDELFILE='roles/user-del/vars/main.yml'
-DELETEOSX=`sed -i '/"'$USERNAME'"/{N;N;N;N;N;d;}' $USERADDFILE`
+DELETEOSX=`sed -i '' '/"'$USERNAME'"/{N;N;N;N;N;d;}' $USERADDFILE`
 DELETELINUX=`sed -i '/"'$USERNAME'"/{N;N;N;N;N;d}' $USERADDFILE`
 
 function delete-user-conf-osx {
@@ -45,7 +45,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
         if grep -q $USERNAME $USERADDFILE; then
             echo "$USERNAME found!"
-            sed -n '/"'$USERNAME'"/{N;N;N;N;N;p;}' $USERADDFILE
+            sed -n  '/"'$USERNAME'"/{N;N;N;N;N;p;}' $USERADDFILE
                 
                 # Ask permission to delete user
                 read -p "-------> Do you want to delete this user? The operation is NOT reversible(y/n) " -n 1 -r
