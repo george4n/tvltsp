@@ -1,11 +1,4 @@
 users:
-- username: "tuser"
-  comment: "Test User"
-  uid: "1009"
-  group: "televinken"
-  password: "123456"
-  shell: /bin/bash
-
 - username: "jmanchild"
   comment: "Jake Manchild"
   uid: "1012"
