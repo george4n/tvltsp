@@ -1,2 +1,4 @@
 remove_users:
-- ruby- tseven
+- ruby
+- tseven
+\n- tseven

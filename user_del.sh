@@ -7,14 +7,14 @@ DELETELINUX=`sed -i '/"'$USERNAME'"/{N;N;N;N;N;d}' $USERADDFILE`
 
 function delete-user-conf-osx {
 
-    echo "- $USERNAME" | tee -a $USERDELFILE
+    echo "\n- $USERNAME" | tee -a $USERDELFILE
     $DELETEOSX
 
 }
 
 function delete-user-conf-linux {
 
-    echo "- $USERNAME" | tee -a $USERDELFILE
+    echo "\n- $USERNAME" | tee -a $USERDELFILE
     $DELETELINUX
 
 }
@@ -54,7 +54,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
                     delete-user-conf-osx
                     playbook
                     exit 0
-                    
+
                 if [[ ! $REPLY =~ ^[Yy]$ ]]
                 then
                     echo "Exiting: Rerun the script"
