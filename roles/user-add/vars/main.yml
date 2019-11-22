@@ -6,13 +6,6 @@ users:
   password: "hello2"
   shell: /bin/bash
 
-- username: "gsmith"
-  comment: "George Smith"
-  uid: "1007"
-  group: "televinken"
-  password: "123456"
-  shell: /bin/bash
-
 - username: "tuser"
   comment: "Test User"
   uid: "1009"
