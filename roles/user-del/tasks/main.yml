@@ -1,4 +1,4 @@
-- name: "Remove old user accounts"
+- name: "Delete old user accounts"
   user:
     name: "{{ item }}"
     state: "absent"
