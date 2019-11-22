@@ -1,8 +1,1 @@
 users:
-- username: "lsorensen"
-  comment: "Lars Sorensen"
-  uid: "1016"
-  group: "televinken"
-  password: "123456"
-  shell: /bin/bash
-
