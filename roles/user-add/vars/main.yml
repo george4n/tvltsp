@@ -41,10 +41,3 @@ users:
   password: "123456"
   shell: /bin/bash
 
-- username: "tfive"
-  comment: "Test Five"
-  uid: "1017"
-  group: "televinken"
-  password: "123456"
-  shell: /bin/bash
-
