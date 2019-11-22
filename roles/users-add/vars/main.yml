@@ -13,14 +13,12 @@ users:
   password: "123456"
   shell: /bin/bash
 
-
 - username: "gsmith"
   comment: "George Smith"
   uid: "1007"
   group: "televinken"
   password: "123456"
   shell: /bin/bash
-
 
 - username: "tuser"
   comment: "Test User"
@@ -29,7 +27,6 @@ users:
   password: "123456"
   shell: /bin/bash
 
-
 - username: "jmanchild"
   comment: "Jake Manchild"
   uid: "1012"
@@ -37,14 +34,12 @@ users:
   password: "123456"
   shell: /bin/bash
 
-
 - username: "lsorensen"
   comment: "Lars Sorensen"
   uid: "1016"
   group: "televinken"
   password: "123456"
   shell: /bin/bash
-
 
 - username: "tfive"
   comment: "Test Five"
