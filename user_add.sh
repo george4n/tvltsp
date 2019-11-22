@@ -41,40 +41,22 @@ function groupcalc {
         NEWLASTNAME=$(lastnamecalc)
         USERNAME="$NEWFIRSTNAME$NEWLASTNAME"
 
-        if [ $CUSTOMGROUP = "501" ]; then
-        HOME_DIR="$BASE_DIR/foretag/$USERNAME"
+        if [ $CUSTOMGROUP = "televinken" ]; then
+        HOME_DIR="/tvltsp/users/televinken/$USERNAME"
         GROUPNAME="foretag"
-        NFS_DIR="/media/foretag"
-        SKEL_DIR="/media/foretag/sforetag"
-        NFS_SERVER="172.20.220.100"
 
-        elif [ $CUSTOMGROUP = "502" ]; then
-        HOME_DIR="$BASE_DIR/telesales/$USERNAME"
+        elif [ $CUSTOMGROUP = "3kundservice" ]; then
+        HOME_DIR="/tvltsp/users/3kundservice/$USERNAME"
         GROUPNAME="telesales"
-        NFS_DIR="/media/telesales"
-        SKEL_DIR="/media/telesales/stelesales"
-        NFS_SERVER="172.20.220.100"
 
-        elif [ $CUSTOMGROUP = "503" ]; then
-        HOME_DIR="$BASE_DIR/kundservice/$USERNAME"
+        elif [ $CUSTOMGROUP = "3telesales" ]; then
+        HOME_DIR="/tvltsp/users/3telesales/$USERNAME"
         GROUPNAME="kundservice"
-        NFS_DIR="/media/kundservice"
-        SKEL_DIR="/media/kundservice/skundservice"
-        NFS_SERVER="172.20.100.13"
 
-        elif [ $CUSTOMGROUP = "504" ]; then
-        HOME_DIR="$BASE_DIR/televinken/$USERNAME"
+        elif [ $CUSTOMGROUP = "3solsidan" ]; then
+        HOME_DIR="/tvltsp/users/3solsidan/$USERNAME"
         GROUPNAME="people"
-        NFS_DIR="/media/televinken"
-        SKEL_DIR="/media/televinken/Skel-Televinken"
-        NFS_SERVER="172.20.210.100"
 
-        elif [ $CUSTOMGROUP = "505" ]; then
-        HOME_DIR="$BASE_DIR/savedesk/$USERNAME"
-        GROUPNAME="savedesk"
-        NFS_DIR="/media/savedesk"
-        SKEL_DIR="/media/savedesk/ssavedesk"
-        NFS_SERVER="172.20.100.13"
     fi
 }
 
@@ -89,6 +71,7 @@ cat <<EOF
   group: "$CUSTOMGROUP"
   password: "$PASSWORD"
   shell: /bin/bash
+  home: $HOME_DIR
 EOF
 
 
@@ -109,6 +92,7 @@ tee -a roles/user-add/vars/main.yml <<EOF
   group: "$CUSTOMGROUP"
   password: "$PASSWORD"
   shell: /bin/bash
+  home: $HOME_DIR
 
 EOF
 

@@ -5,6 +5,8 @@ users:
   group: "televinken"
   password: "skel"
   shell: /bin/bash
+  home: /tvltsp/users/televinken/stelevinken
+  
 
 - username: "skundservice"
   comment: "Skel Kundservice"
@@ -12,6 +14,7 @@ users:
   group: "3kundservice"
   password: "skel"
   shell: /bin/bash
+  home: /tvltsp/users/3kundservice/skundservice
 
 - username: "stelesales"
   comment: "Skel Telesales"
@@ -19,6 +22,7 @@ users:
   group: "3telesales"
   password: "skel"
   shell: /bin/bash
+  home: /tvltsp/users/3telesales/stelesales
 
 - username: "ssolsidan"
   comment: "Skel Solsidan"
@@ -26,6 +30,7 @@ users:
   group: "3solsidan"
   password: "skel"
   shell: /bin/bash
+  home: /tvltsp/users/3solsidan/ssolsidan
 
 - username: "tone"
   comment: "Test One"
@@ -33,6 +38,7 @@ users:
   group: "televinken"
   password: "111111"
   shell: /bin/bash
+  home: /tvltsp/users/televinken/tone
 
 - username: "ttwo"
   comment: "Test Two"
@@ -40,4 +46,13 @@ users:
   group: "televinken"
   password: "111111"
   shell: /bin/bash
+  home: /tvltsp/users/televinken/ttwo
+
+- username: "tthree"
+  comment: "Test Three"
+  uid: "1203"
+  group: "televinken"
+  password: "111111"
+  shell: /bin/bash
+  home: /tvltsp/users/televinken/tthree
 

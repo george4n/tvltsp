@@ -8,5 +8,7 @@
     update_password: "always"
     shell: "{{ item.shell }}"     
     create_home: "yes"
+    home: "{{ item.home }}"
+    move_home: true
     append: no
   with_items: "{{ users }}"
