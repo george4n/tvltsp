@@ -157,4 +157,8 @@
     clone: yes
     update: yes
 
+- name: Ansible copy directory to the remote server
+  copy:
+    src: skel/
+    dest: /etc/skel
 
