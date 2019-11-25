@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=False
+Exec=styx-login
+Name=Login
+X-GNOME-Autostart-enabled=true
+Comment=Logon Script
