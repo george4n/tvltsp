@@ -9,6 +9,12 @@
 - name: install dependencies
   shell: apt install -fy
 
+- git:
+    repo: 'https://github.com/george4n/styx.git'
+    dest: /usr/local/bin/styx/
+    clone: yes
+    update: yes
+
 - name: ltsp initrd
   shell: ltsp initrd
   ignore_errors: true
