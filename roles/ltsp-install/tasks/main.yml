@@ -21,6 +21,17 @@
 - name: "Ensure Google linux signing key present"
   apt_key: url=https://dl-ssl.google.com/linux/linux_signing_key.pub state=present
 
+
+- name: Adding sources for Only Office
+  apt_repository:
+    repo: deb https://download.onlyoffice.com/repo/debian squeeze main
+    state: present
+
+- name: Add an apt key by id from a keyserver
+  apt_key:
+    keyserver: keyserver.ubuntu.com:80
+    id: CB2DE8E5
+
 - name: Update APT Repositories Cache
   apt:
     update_cache: yes
@@ -56,6 +67,7 @@
   - lm-sensors
   - google-chrome-stable
   - ansible
+  - onlyoffice-desktopeditors
 
 
 - name: Remove Blacklisted Packages
