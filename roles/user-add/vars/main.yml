@@ -32,3 +32,11 @@ users:
   shell: /bin/bash
   home: /tvltsp/users/3solsidan/ssolsidan
 
+- username: "lsorensen"
+  comment: "Lars Sorensen"
+  uid: "1200"
+  group: "televinken"
+  password: "123321"
+  shell: /bin/bash
+  home: /tvltsp/users/televinken/lsorensen
+
